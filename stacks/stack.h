@@ -35,6 +35,9 @@ namespace mentor{
                 }
             }
 
+            Stack(const Stack& other) = delete;
+            Stack& operator=(const Stack& other) = delete;
+
         public:
             void push(const T& val){
                 if(top == nullptr){
@@ -87,5 +90,4 @@ namespace mentor{
             return os;
         }
     };
-
 }
