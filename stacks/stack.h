@@ -74,7 +74,7 @@ namespace mentor{
                 }
                 std::cout << std::endl;
             }
-            bool isEmpty(){ return s == 0;};
+            std::string isEmpty(){ return s == 0 ? "True" : "False";};
             int size(){ return s; } 
 
         private:

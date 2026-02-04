@@ -20,6 +20,20 @@ int main(){
     std::cout << s << std::endl;
     std::cout << "Is the stack empty?: " << s.isEmpty() << std::endl;
 
+    mentor::Stack<int> bigNums;
+    for(auto i = 100; i >= 1; i--){
+        bigNums.push(i);
+    }
+    bigNums.peek();
+    std::cout << "Size of stack: " << bigNums.size() << std::endl;
+    std::cout << bigNums;
+    for(auto i = 1; i <= 100; i++){
+        bigNums.pop();
+    }
+    bigNums.peek();
+    std::cout << "Size of stack: " << bigNums.size() << std::endl;
+    std::cout << "Is the stack empty?: " << s.isEmpty() << std::endl;
+
     mentor::Stack<std::pair<int, int>> s2;
     std::pair<int,int> pair;
     pair.first = 1;
