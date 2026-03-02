@@ -165,6 +165,7 @@ def main():
     print(f"Size of ll1: {ll1.__len__()}")
     ll1.min()
     ll1.print()
+    ll1.deleteAtIndex(49)
     
 if __name__ == "__main__":
     main()
