@@ -140,11 +140,24 @@ class LinkedList:
             temp = temp.next
         print(f"Min value: {min}")
         
+    def get_mid(self, head):
+        slow = head
+        fast = head.next
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        
+        return slow
+        
 def main():
     ll1 = LinkedList()
     ll1.addAtHead(1)
     ll1.addAtTail(2)
     ll1.addAtIndex(0, 3)
+    ll1.addAtHead(4)
+    mid = ll1.get_mid(ll1.head)
+    print(f"Node in middle: {mid.data}")
     ll1.print()
     print(f"Size of ll1: {ll1.__len__()}")
     ll1.delete(5)
@@ -166,6 +179,7 @@ def main():
     ll1.min()
     ll1.print()
     ll1.deleteAtIndex(49)
+    
     
 if __name__ == "__main__":
     main()
